@@ -10,19 +10,17 @@ data_input = [
 
 
 
-report1 = [7, 6, 4, 2, 1]
-kaka = report1[1] and report1[2] > report1[0]
-kaka2 = report1[1] and report1[2] < report1[0]
+numbers = [7, 8, 4, 2, 1]
+#numbers = report1[0] < report1[1] and report1[2] < report1[0]
 #check = 0
 
 
-# ökar eller minskar?
-#är report1[1] och report1[2] högre elller lägre än report[0]?
-
-
-
-
-
+for i in range(1, len(numbers)):
+    if numbers[i] < numbers[i - 1]:
+        print(numbers[i])
+        break
+        print(numbers[i])
+        print('ok')
 
 #rules
 
