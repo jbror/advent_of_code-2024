@@ -1,3 +1,4 @@
+
 data_input = [
 [7, 6, 4, 2, 1],
 [1, 2, 7, 8, 9],
@@ -9,18 +10,71 @@ data_input = [
 
 
 
+my_list = [2, 5, 9, 17, 20]
 
-numbers = [7, 8, 4, 2, 1]
-#numbers = report1[0] < report1[1] and report1[2] < report1[0]
-#check = 0
-
-
-for i in range(1, len(numbers)):
-    if numbers[i] < numbers[i - 1]:
-        print(numbers[i])
+is_increasing = True
+for i in range(len(my_list) - 1):
+    if my_list[i] >= my_list[i + 1]:
+        is_increasing = False
+        print(i)
         break
-        print(numbers[i])
-        print('ok')
+    elif my_list[i] + 3 < my_list[i + 1]:
+        print(my_list[i + 1])
+        print('to much')
+        is_increasing = False
+        break
+    else:
+        print('loooks good i think')
+
+
+
+if is_increasing:
+    print("Increasing yoho!")
+else:
+    print("Not increasing or to much sir!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #rules
 
