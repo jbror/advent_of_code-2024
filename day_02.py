@@ -10,13 +10,14 @@ data_input = [
 
 
 
-my_list = [2, 5, 9, 17, 20]
+my_list = [2, 4, 9, 17, 20]
 
 is_increasing = True
 for i in range(len(my_list) - 1):
     if my_list[i] >= my_list[i + 1]:
         is_increasing = False
         print(i)
+        print('not bigger')
         break
     elif my_list[i] + 3 < my_list[i + 1]:
         print(my_list[i + 1])
@@ -24,7 +25,7 @@ for i in range(len(my_list) - 1):
         is_increasing = False
         break
     else:
-        print('loooks good i think')
+        print('so far so good')
 
 
 
