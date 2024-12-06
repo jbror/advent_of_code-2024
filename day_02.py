@@ -22,13 +22,15 @@ for i in range(len(my_list) - 1):
         print(i)
         print('not bigger')
         while is_decreasing == True:
-            if my_list[i] - 3 <  my_list[i +1]:
+            if my_list[i] - 3 >  my_list[i +1]:
                 print('to much decrease')
                 is_decreasing = False
+                is_safe = False
                 break
             else:
                 break
 
+        break
 
     elif my_list[i] + 3 < my_list[i + 1]:
         print(my_list[i + 1])
@@ -41,9 +43,10 @@ for i in range(len(my_list) - 1):
 
 
 if is_safe:
-    print("Not safe, next chernobyl INC!")
-else:
     print("Very safe")
+else:
+    print("Not safe, next chernobyl INC!")
+
 
 
 
