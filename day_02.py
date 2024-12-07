@@ -1,32 +1,14 @@
-data_input = [
-[7,6,4,2,1],
-[1,2,7,8,9],
-[9,7,6,2,1],
-[1,3,2,4,5],
-[8,6,4,4,1],
-[1,3,6,7,9]
-]
-
-report_list2 = []
 report_list = []
-with open('input_test_day02.txt', 'r') as file:
+report_list_copy = []
+with open('input_day02.txt', 'r') as file:
     for line in file:
         numbers = line.split()
         for n in numbers:
             int_n = int(n)
-            report_list2.append(int_n)
-            print(report_list2)
-        report_list.append(report_list2)
-        report_list2 = []
+            report_list_copy.append(int_n)
+        report_list.append(report_list_copy)
+        report_list_copy = []
 
-            #print(int_n)
-            #print(type(int_n))
-        #print(numbers)
-        #level_num = int(numbers)
-        #report_list.append(level_num)
-        #print(report_list)
-
-print(report_list)
 data_input = report_list
 safe_score = 0
 
@@ -55,7 +37,6 @@ for l in data_input:
             is_increasing = False
             is_safe = False # not needed but i'm keeping this to make it clear!
             break
-
 
     if is_increasing or is_decreasing:
         print("very safe")
