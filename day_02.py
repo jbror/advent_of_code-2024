@@ -1,29 +1,23 @@
+my_list = [1, 3, 2, 4, 5]
 
-data_input = [
-[7, 6, 4, 2, 1],
-[1, 2, 7, 8, 9],
-[9, 7, 6, 2, 1],
-[1, 3, 2, 4, 5],
-[8, 6, 4, 4, 1],
-[1, 3, 6, 7, 9],
-]
+is_increasing = True
+is_decreasing = True
 
+for i in range(1, len(my_list)):
+    if my_list[i] > my_list[i-1]:
+        is_decreasing = False
+    elif my_list[i] < my_list[i-1]:
+        is_increasing = False
 
-my_list = [7,10,13, 14, 15]
-
-is_safe = True
-
-for i in range(len(my_list) - 1):
-    if my_list[i] >= my_list[i + 1]:
-        # check for duplicates and to much decrease
-        if my_list[i] == my_list[i + 1] or my_list[i] - 3 > my_list[i + 1]:
-            is_safe = False
-            break
-    elif my_list[i] + 3 < my_list[i + 1]:
-        is_safe = False
+    if not is_increasing and not is_decreasing:
         break
 
-if is_safe:
-    print("Very safe")
+    # this checks if the code increases or decrease by maximum of 3
+    if abs(my_list[i] - my_list[i-1]) > 3:
+        is_safe = False # not needed but i'm keeping this to make it clear!
+        break
+
+if is_increasing or is_decreasing:
+    print("very safe")
 else:
     print("Not safe, next Chernobyl INC!")
