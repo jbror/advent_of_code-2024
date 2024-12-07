@@ -28,6 +28,7 @@ with open('input_test_day02.txt', 'r') as file:
 
 print(report_list)
 data_input = report_list
+safe_score = 0
 
 for l in data_input:
     my_list = l
@@ -58,5 +59,8 @@ for l in data_input:
 
     if is_increasing or is_decreasing:
         print("very safe")
+        safe_score += 1
     else:
         print("Not safe, next Chernobyl INC!")
+
+    print(safe_score)
