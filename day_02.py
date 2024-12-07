@@ -1,10 +1,14 @@
-my_list = [1,2,5,9, 11]
+my_list = [1,3,4,8,9]
 
 is_increasing = True
 is_decreasing = True
 
 for i in range(1, len(my_list)):
-    if my_list[i] > my_list[i-1]:
+    if my_list[i] == my_list[i-1]:
+        is_decreasing = False
+        is_increasing = False
+        break
+    elif my_list[i] > my_list[i-1]:
         is_decreasing = False
     elif my_list[i] < my_list[i-1]:
         is_increasing = False
@@ -14,7 +18,6 @@ for i in range(1, len(my_list)):
 
     # this checks if the code increases or decrease by maximum of 3
     if abs(my_list[i] - my_list[i-1]) > 3:
-        print('yo')
         is_decreasing = False
         is_increasing = False
         is_safe = False # not needed but i'm keeping this to make it clear!
