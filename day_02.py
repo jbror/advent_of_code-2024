@@ -9,12 +9,12 @@ data_input = [
 ]
 
 
-
-my_list = [9, 5, 4, 3, 2]
+my_list =[7,10, 11, 12, 13]
 
 is_decreasing = True
 is_increasing = True
 is_safe = True
+
 
 for i in range(len(my_list) - 1):
     if my_list[i] >= my_list[i + 1]:
@@ -22,7 +22,13 @@ for i in range(len(my_list) - 1):
         print(i)
         print('not bigger')
         while is_decreasing == True:
-            if my_list[i] - 3 >  my_list[i +1]:
+
+            if my_list[i] == my_list[i +1]:
+                print('even, not good!')
+                is_safe = False
+                break
+
+            elif my_list[i] - 3 >  my_list[i +1]:
                 print('to much decrease')
                 is_decreasing = False
                 is_safe = False
@@ -31,7 +37,6 @@ for i in range(len(my_list) - 1):
                 break
 
         break
-
     elif my_list[i] + 3 < my_list[i + 1]:
         print(my_list[i + 1])
         print('to much')
@@ -39,7 +44,6 @@ for i in range(len(my_list) - 1):
         break
     else:
         print('so far so good')
-
 
 
 if is_safe:
