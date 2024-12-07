@@ -1,9 +1,10 @@
-my_list = [1,3,4,8,9]
+my_list = [3,6,6,5,6]
 
 is_increasing = True
 is_decreasing = True
 
 for i in range(1, len(my_list)):
+    print(is_increasing, is_decreasing)
     if my_list[i] == my_list[i-1]:
         is_decreasing = False
         is_increasing = False
@@ -22,6 +23,7 @@ for i in range(1, len(my_list)):
         is_increasing = False
         is_safe = False # not needed but i'm keeping this to make it clear!
         break
+
 
 if is_increasing or is_decreasing:
     print("very safe")
